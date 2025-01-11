@@ -68,6 +68,7 @@
 			)
 		)
 	)
+	(clearance 0.5)
 	(attr board_only exclude_from_pos_files exclude_from_bom)
 	(pad "" np_thru_hole circle
 		(at 0 0)
