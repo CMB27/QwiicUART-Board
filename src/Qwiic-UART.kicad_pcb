@@ -7,6 +7,15 @@
 		(legacy_teardrops no)
 	)
 	(paper "USLetter")
+	(title_block
+		(title "Qwiic UART")
+		(date "2025-01-11")
+		(rev "0.0.1")
+		(company "Designer: C. M. Bulliner")
+		(comment 2 "OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE.")
+		(comment 3 "This document is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING")
+		(comment 4 "© 2025 C. M. Bulliner. Released under the CERN-OHL-P v2 license.")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(31 "B.Cu" signal)
@@ -39,6 +48,45 @@
 		(58 "User.9" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
 		(aux_axis_origin 139.7 107.95)
@@ -50,14 +98,14 @@
 			(usegerberextensions no)
 			(usegerberattributes yes)
 			(usegerberadvancedattributes yes)
-			(creategerberjobfile yes)
+			(creategerberjobfile no)
 			(dashed_line_dash_ratio 12.000000)
 			(dashed_line_gap_ratio 3.000000)
 			(svgprecision 4)
 			(plotframeref no)
 			(viasonmask no)
 			(mode 1)
-			(useauxorigin no)
+			(useauxorigin yes)
 			(hpglpennumber 1)
 			(hpglpenspeed 20)
 			(hpglpendiameter 15.000000)
@@ -73,12 +121,12 @@
 			(plotfptext yes)
 			(plotinvisibletext no)
 			(sketchpadsonfab no)
-			(subtractmaskfromsilk no)
+			(subtractmaskfromsilk yes)
 			(outputformat 1)
 			(mirror no)
-			(drillshape 1)
+			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "")
+			(outputdirectory "../gerbers/")
 		)
 	)
 	(net 0 "")
@@ -358,7 +406,6 @@
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "bffb173d-0d63-48c6-9d92-ae3d7380612c")
 			(effects
 				(font
@@ -484,8 +531,8 @@
 		(descr "TSSOP, 16 Pin (https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "TSSOP SO JEDEC-MO-153-AB TI-PW0016A Microchip-ST Toshiba-TSSOP16-P-0044-0.65A NXP-SOT403-1 Infineon-P-TSSOP-16-800")
 		(property "Reference" "U1"
-			(at 0 -3.45 90)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(layer "F.Fab")
 			(hide yes)
 			(uuid "3d177fe1-3154-4258-b200-c091488ab945")
 			(effects
@@ -495,7 +542,7 @@
 				)
 			)
 		)
-		(property "Value" "SC16IS740"
+		(property "Value" "SC16IS741A"
 			(at 0 3.45 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -519,7 +566,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.nxp.com/docs/en/data-sheet/SC16IS740_750_760.pdf"
+		(property "Datasheet" "https://www.nxp.com/docs/en/data-sheet/SC16IS741A.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -691,9 +738,8 @@
 			(uuid "a4025b9a-12b1-4ab4-9651-663aed254fb7")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "c43f8e37-ad6b-4abf-a728-ded7fdc2b9a0")
 			(effects
 				(font
@@ -1051,7 +1097,6 @@
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "4fdd3708-bb95-4875-8e85-5cd6e244b66c")
 			(effects
 				(font
@@ -1267,7 +1312,6 @@
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "29e212af-51e8-4073-812e-7854de34789b")
 			(effects
 				(font
@@ -1313,8 +1357,8 @@
 		(descr "JST SH series connector, SM04B-SRSS-TB (http://www.jst-mfg.com/product/pdf/eng/eSH.pdf), generated with kicad-footprint-generator")
 		(tags "connector JST SH horizontal")
 		(property "Reference" "J2"
-			(at 0 -3.98 90)
-			(layer "F.SilkS")
+			(at 0 0 180)
+			(layer "F.Fab")
 			(hide yes)
 			(uuid "e3f4961d-38db-43fd-a7b9-871c5a385f34")
 			(effects
@@ -1541,9 +1585,8 @@
 			(uuid "8ab27c09-e263-450c-82a8-3941698698fa")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "89cdc2f9-bac4-45ce-956d-93e9d24c5204")
 			(effects
 				(font
@@ -1631,8 +1674,8 @@
 		(descr "JST SH series connector, SM04B-SRSS-TB (http://www.jst-mfg.com/product/pdf/eng/eSH.pdf), generated with kicad-footprint-generator")
 		(tags "connector JST SH horizontal")
 		(property "Reference" "J1"
-			(at 0 -3.98 90)
-			(layer "F.SilkS")
+			(at 0 0 0)
+			(layer "F.Fab")
 			(hide yes)
 			(uuid "35455858-abe3-4408-8c60-00fbd3b3106a")
 			(effects
@@ -1859,9 +1902,8 @@
 			(uuid "b961d226-4765-44f5-95b0-8cc1cb0cf2d3")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "f7516f31-98bb-41d9-83e6-b1f2228c57eb")
 			(effects
 				(font
@@ -1949,8 +1991,8 @@
 		(descr "Miniature Crystal Clock Oscillator ECS 2520MV series, https://www.ecsxtal.com/store/pdf/ECS-2520MV.pdf")
 		(tags "Miniature Crystal Clock Oscillator ECS 2520MV series SMD SMT HCMOS")
 		(property "Reference" "X1"
-			(at 0 -2.5 0)
-			(layer "F.SilkS")
+			(at 0 0 0)
+			(layer "F.Fab")
 			(hide yes)
 			(uuid "e406c20b-43fe-47ee-bbfc-d1a3952bb226")
 			(effects
@@ -1985,7 +2027,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ecsxtal.com/store/pdf/ECS-2520MV.pdf"
+		(property "Datasheet" "https://ecsxtal.com/store/pdf/ECS-2520MVLC.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2168,9 +2210,8 @@
 			(uuid "28dd076b-a52e-4979-9cba-a4b3223afbe4")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 90)
+			(at 0 0 180)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "ebd8ed03-ce09-48e6-9274-aa58f6a54fab")
 			(effects
 				(font
@@ -2419,7 +2460,6 @@
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
 			(layer "F.Fab")
-			(hide yes)
 			(uuid "ebc19e91-b1ab-481b-9dc2-8da8ac18899c")
 			(effects
 				(font
@@ -2626,9 +2666,8 @@
 		(descr "Through hole straight pin header, 1x06, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x06 2.54mm single row")
 		(property "Reference" "J4"
-			(at 0 -2.33 90)
-			(layer "F.SilkS")
-			(hide yes)
+			(at 2.54 6.35 0)
+			(layer "F.Fab")
 			(uuid "fec7208d-5d5c-48c4-a7a2-4f0bf3b84a16")
 			(effects
 				(font
@@ -2692,7 +2731,7 @@
 		(path "/f57f673e-6b2c-4e4c-a919-3cb1bbe6c42a")
 		(sheetname "Root")
 		(sheetfile "Qwiic-UART.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom)
 		(pad "1" thru_hole circle
 			(at 0 0 270)
 			(size 1.7 1.7)
@@ -2768,9 +2807,8 @@
 		(descr "Through hole straight pin header, 1x06, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x06 2.54mm single row")
 		(property "Reference" "J3"
-			(at 0 -2.33 90)
-			(layer "F.SilkS")
-			(hide yes)
+			(at 2.54 6.35 180)
+			(layer "F.Fab")
 			(uuid "c1f650b7-8bec-4f8f-a7ef-f254caae173e")
 			(effects
 				(font
@@ -2834,7 +2872,7 @@
 		(path "/429d8c24-2a39-4352-a0a4-9e7afc57b081")
 		(sheetname "Root")
 		(sheetfile "Qwiic-UART.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_bom)
 		(pad "1" thru_hole circle
 			(at 0 0 90)
 			(size 1.7 1.7)
@@ -2909,16 +2947,15 @@
 		(descr "SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, open")
 		(tags "solder jumper open")
 		(property "Reference" "JP2"
-			(at 0 1.8 90)
-			(layer "B.SilkS")
-			(hide yes)
+			(at 1.905 0 180)
+			(layer "B.Fab")
 			(uuid "9a33a982-903d-4b07-9505-4af731d8cc1d")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.5 0.5)
+					(thickness 0.075)
 				)
-				(justify mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "SolderJumper_2_Open"
@@ -3185,16 +3222,15 @@
 		(descr "SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, open")
 		(tags "solder jumper open")
 		(property "Reference" "JP3"
-			(at 0 1.8 90)
-			(layer "B.SilkS")
-			(hide yes)
+			(at 1.905 0 180)
+			(layer "B.Fab")
 			(uuid "cce6bb39-7156-4e40-b19d-c607a18b7045")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.5 0.5)
+					(thickness 0.075)
 				)
-				(justify mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "SolderJumper_2_Open"
@@ -3625,16 +3661,15 @@
 		(descr "SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 1 copper strip")
 		(tags "net tie solder jumper bridged")
 		(property "Reference" "JP1"
-			(at 0 1.8 90)
-			(layer "B.SilkS")
-			(hide yes)
+			(at 1.905 0 180)
+			(layer "B.Fab")
 			(uuid "776829dc-5fd0-4293-826a-8d3b3bc44760")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.5 0.5)
+					(thickness 0.075)
 				)
-				(justify mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "SolderJumper_2_Bridged"
@@ -3915,16 +3950,15 @@
 		(descr "SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, open")
 		(tags "solder jumper open")
 		(property "Reference" "JP4"
-			(at 0 1.8 90)
-			(layer "B.SilkS")
-			(hide yes)
+			(at 1.905 0 180)
+			(layer "B.Fab")
 			(uuid "9af44591-43d8-414a-8bd4-bc0805c149bf")
 			(effects
 				(font
-					(size 1 1)
-					(thickness 0.15)
+					(size 0.5 0.5)
+					(thickness 0.075)
 				)
-				(justify mirror)
+				(justify top mirror)
 			)
 		)
 		(property "Value" "SolderJumper_2_Open"
@@ -4342,8 +4376,8 @@
 			(justify left mirror)
 		)
 	)
-	(gr_text "REV: 0.0.1"
-		(at 147.32 107.95 -90)
+	(gr_text "REV: ${REVISION}"
+		(at 147.32 107.95 270)
 		(layer "B.SilkS")
 		(uuid "c1c86f91-f3c3-4a0a-b718-7a98a754570e")
 		(effects
@@ -4617,6 +4651,255 @@
 			)
 			(justify right)
 		)
+	)
+	(gr_text "Circuit Board Specifications\n\nBoard Thickness: 1.6 mm\nSubstrate Material: FR4\nCopper Layers: 2\nCopper Thickness: 1 oz\nSoldermask Color: Any (Blue Suggested)\nSurface Finish: Any (HASL Lead-Free Suggested)\n\nSmallest Hole Diameter: 0.3 mm [11.8 mil]\nSmallest Trace Width: 0.2 mm [7.8 mil]\nSmallest Trace Spacing: 0.2 mm [7.8 mil]\n\nDocumentation and source files can be found at\nhttps://github.com/CMB27/Qwiic-UART."
+		(at 15.24 200.66 0)
+		(layer "Cmts.User")
+		(uuid "72e47953-161c-4b0d-9547-0e9b9ef08f76")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.1875)
+			)
+			(justify left bottom)
+		)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "017c3f6d-f4c3-4171-8985-27fcc1087a19")
+		(pts
+			(xy 129.54 97.79) (xy 129.54 118.11)
+		)
+		(height 6.35)
+		(gr_text "20.32 mm"
+			(at 123.19 107.95 90)
+			(layer "Dwgs.User")
+			(uuid "017c3f6d-f4c3-4171-8985-27fcc1087a19")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 2)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 1)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "7e6d8d1d-6d4f-44fb-83ff-fa62e2822e27")
+		(pts
+			(xy 127 95.25) (xy 127 120.65)
+		)
+		(height 7.62)
+		(gr_text "25.40 mm"
+			(at 119.38 107.95 90)
+			(layer "Dwgs.User")
+			(uuid "7e6d8d1d-6d4f-44fb-83ff-fa62e2822e27")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 2)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 1)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "ab8c4856-4bb1-4b3b-a37f-e441bdea90b7")
+		(pts
+			(xy 149.86 118.11) (xy 129.54 118.11)
+		)
+		(height -7.62)
+		(gr_text "20.32 mm"
+			(at 139.7 125.73 0)
+			(layer "Dwgs.User")
+			(uuid "ab8c4856-4bb1-4b3b-a37f-e441bdea90b7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 2)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 1)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type aligned)
+		(layer "Dwgs.User")
+		(uuid "c43f6ad0-1d36-4bd5-9b96-2967f255076a")
+		(pts
+			(xy 152.4 120.65) (xy 127 120.65)
+		)
+		(height -8.89)
+		(gr_text "25.40 mm"
+			(at 139.7 129.54 0)
+			(layer "Dwgs.User")
+			(uuid "c43f6ad0-1d36-4bd5-9b96-2967f255076a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 2)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 1)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type leader)
+		(layer "Dwgs.User")
+		(uuid "ba5e9963-ff3a-4cf5-874c-4fc43d2db5ea")
+		(pts
+			(xy 149.86 97.79) (xy 152.4 91.44)
+		)
+		(gr_text "4x ⌀ 3.2mm"
+			(at 154.94 91.44 0)
+			(layer "Dwgs.User")
+			(uuid "ba5e9963-ff3a-4cf5-874c-4fc43d2db5ea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify left)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 0)
+			(units_format 0)
+			(precision 4)
+			(override_value "4x ⌀ 3.2mm")
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(text_frame 0)
+			(extension_offset 1.6)
+		)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Dwgs.User")
+		(uuid "4e90a8a0-2468-46a6-8ad0-eae00fe54de7")
+		(pts
+			(xy 127 120.65) (xy 129.54 118.11)
+		)
+		(height 5.08)
+		(orientation 0)
+		(gr_text "2.54 mm"
+			(at 125.73 125.73 0)
+			(layer "Dwgs.User")
+			(uuid "4e90a8a0-2468-46a6-8ad0-eae00fe54de7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify right)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 2)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 2)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
+	)
+	(dimension
+		(type orthogonal)
+		(layer "Dwgs.User")
+		(uuid "c363a08a-b154-479b-ac6b-2dfc3ecb012a")
+		(pts
+			(xy 129.54 97.79) (xy 127 95.25)
+		)
+		(height -6.35)
+		(orientation 1)
+		(gr_text "2.54 mm"
+			(at 123.19 93.98 90)
+			(layer "Dwgs.User")
+			(uuid "c363a08a-b154-479b-ac6b-2dfc3ecb012a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify left)
+			)
+		)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 1)
+			(precision 2)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 2)
+			(extension_height 0.58642)
+			(extension_offset 0.5) keep_text_aligned)
 	)
 	(via
 		(at 144.78 105.41)
