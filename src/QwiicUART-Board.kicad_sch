@@ -5,15 +5,117 @@
 	(uuid "0a62f701-930c-47ca-8e1b-6bdebd71a431")
 	(paper "USLetter")
 	(title_block
-		(title "Qwiic UART")
-		(date "2025-01-11")
-		(rev "0.0.1")
+		(title "Qwiic UART Board")
+		(date "2025-02-08")
+		(rev "0.0.2")
 		(company "Designer: C. M. Bulliner")
 		(comment 2 "OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE.")
 		(comment 3 "This document is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING")
 		(comment 4 "© 2025 C. M. Bulliner. Released under the CERN-OHL-P v2 license.")
 	)
 	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector_Generic:Conn_01x06"
 			(pin_names
 				(offset 1.016) hide)
@@ -1925,6 +2027,12 @@
 		(color 0 0 0 0)
 		(uuid "de4464f9-1ea6-417e-ac06-4da7afe294b4")
 	)
+	(junction
+		(at 127 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e0ec8ced-7405-4e22-ac30-f114998e9c19")
+	)
 	(no_connect
 		(at 81.28 33.02)
 		(uuid "2fe00707-3d3a-47ad-aed0-236cb2762d8c")
@@ -2120,6 +2228,16 @@
 			(type default)
 		)
 		(uuid "2995be90-3c99-49cb-b377-de058d584653")
+	)
+	(wire
+		(pts
+			(xy 127 127) (xy 127 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29b7bac7-d59b-4298-8a73-1b2d8e75602a")
 	)
 	(wire
 		(pts
@@ -2621,7 +2739,7 @@
 		)
 		(uuid "fd6b31ee-aba1-428c-8d87-3215f268a430")
 	)
-	(text "Documentation and source files can be found at\nhttps://github.com/CMB27/Qwiic-UART."
+	(text "Documentation and source files can be found at\nhttps://github.com/CMB27/QwiicUART-Board."
 		(exclude_from_sim no)
 		(at 15.24 200.66 0)
 		(effects
@@ -2629,7 +2747,7 @@
 				(size 1.5 1.5)
 			)
 			(justify left bottom)
-			(href "https://github.com/CMB27/Qwiic-UART")
+			(href "https://github.com/CMB27/QwiicUART-Board")
 		)
 		(uuid "9f4881b8-0ba7-4d86-ace9-f2523d187d35")
 	)
@@ -3871,6 +3989,74 @@
 			(project ""
 				(path "/0a62f701-930c-47ca-8e1b-6bdebd71a431"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 127 129.54 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "55f7cd7e-7c48-4e21-8923-03ea9e797cc2")
+		(property "Reference" "TP1"
+			(at 129.54 132.8419 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 129.54 134.1119 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 121.92 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 121.92 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 127 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5c9d4977-e756-440d-b9ac-88513f3031d3")
+		)
+		(instances
+			(project ""
+				(path "/0a62f701-930c-47ca-8e1b-6bdebd71a431"
+					(reference "TP1")
 					(unit 1)
 				)
 			)

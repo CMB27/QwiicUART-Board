@@ -1,12 +1,12 @@
-# Qwiic UART
-![Qwiic UART Front View](extras/Qwiic-UART_Front_Render.png)
+# QwiicUART Board
+![Qwiic UART Front View](extras/QwiicUART-Board_Front_Picture.jpg)
 
 Have you ever needed another Serial (UART) port, but your microcontroller doesn't have any more.
 This board allows you to add up to four Serial ports via the Qwiic system.
 
 This is a breakout board for the NXP SC16IS741A.
 The SC16IS741A is a UART controlled using an I<sup>2</sup>C or SPI interface.
-This board is only setup to be able to usilize the I<sup>2</sup>C interface.
+This board is only setup to be able to utilize the I<sup>2</sup>C interface.
 
 > [!NOTE]
 > This design is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE.
@@ -17,10 +17,11 @@ This board is only setup to be able to usilize the I<sup>2</sup>C interface.
 
 
 ### Documentation
-- [Schematic](Qwiic-UART.pdf)
+- [Schematic](QwiicUART-Board.pdf)
 - [KiCad Source Files](src)
-- [Qwiic Landing Page](https://www.sparkfun.com/qwiic)
-- [SC16IS741A Datasheet](https://www.nxp.com/docs/en/data-sheet/SC16IS741A.pdf)
+- [QwiicUART Library](https://github.com/CMB27/QwiicUART-Library)
+- [SparkFun Qwiic Landing Page](https://www.sparkfun.com/qwiic)
+- [NXP SC16IS741A Datasheet](https://www.nxp.com/docs/en/data-sheet/SC16IS741A.pdf)
 
 
 
@@ -51,15 +52,15 @@ This board is only setup to be able to usilize the I<sup>2</sup>C interface.
 
 
 ## Assembly
-<img src="extras/Qwiic-UART-brd.svg" alt="Qwiic UART Fabrication View" width="720">
+<img src="extras/QwiicUART-Board.svg" alt="Qwiic UART Fabrication View" width="800">
 
 All components are assembled to the top side of the board.
 See the image above for component locations.
 
-![Qwiic UART Back View](extras/Qwiic-UART_Back_Render.png)
+![Qwiic UART Back View](extras/QwiicUART-Board_Back_Render.png)
 
 On the back side of the board there are several solder jumper locations.
-By default the lower `0x90` jumper is connected.
+By default the lower `0x48` jumper is connected.
 This connection can be cut and another jumper can be soldered to change the I<sup>2</sup>C address.
 
 > [!WARNING]
